@@ -1,0 +1,25 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import Hero from '../components/Hero.astro'
+import Feature from '../components/Feature.astro'
+---
+
+<DefaultLayout title="Home">
+  <Hero />
+  <section class="my-64">
+    <div class="container">
+      <h2 class="mb-16 text-6xl">Our Games!</h2>
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+        <Feature icon="mdi:code-json" title="Algorithm Logic">
+          Interested in Competitive Programming? We have a lot of Ramadan Challenges for you to practice your skills.
+        </Feature>
+        <Feature icon="mdi:security" title="Cyber Security">
+          Want to be a hacker? Haha! Well, we have prepare challenges about Cyber Security Ramadan 2023 Special Edition.
+        </Feature>
+        <Feature icon="mdi:web" title="Front End">
+          Yo, you're a front end developer? Hmm, want to prove it? Challenge yourself with our Front End Challenges.
+        </Feature>
+      </div>
+    </div>
+  </section>
+</DefaultLayout>

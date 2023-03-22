@@ -1,0 +1,47 @@
+---
+import { Icon } from 'astro-icon'
+
+const { src = '/astronaut-hero-img.webp' } = Astro.props
+---
+
+<section class="hero my-24">
+  <div class="container">
+    <div class="flex lg:flex-row items-center gap-24 flex-col-reverse">
+      <div class="flex flex-col items-center gap-6 md:items-start">
+        <h1 class="text-center text-4xl md:text-left lg:text-4xl">
+          <slot><span class="text-yellow-500">Ramadan of Code - Workshop & Riset Informatika</span></slot>
+        </h1>
+        <p class="text-center md:text-left text-lg">
+          <slot
+            ><span class="text-gray-500 dark:text-gray-300">
+              Ramadan of Code - Workshop Riset Informatika Special Ramadan Challenge 2023! Let's challenge your skills
+              about anything!
+            </span></slot
+          >
+        </p>
+        <div class="flex flex-col gap-3 min-[500px]:flex-row">
+          <a class="button" href="/blog/">
+            <span class="text-white">Let's Play!</span>
+          </a>
+        </div>
+      </div>
+      <img class="lg:block lg:w-96 hidden" src={src} alt="" decoding="async" />
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  .text-gradient {
+    background: linear-gradient(315deg, var(--primary-200) 25%, var(--secondary-500));
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  :global(.darkmode .text-gradient) {
+    background: linear-gradient(315deg, var(--primary-200) 25%, var(--secondary-400));
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
